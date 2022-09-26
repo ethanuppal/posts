@@ -1,0 +1,35 @@
+<!--
+posts/resources: macho2-loadcmd.svg
+Copyright (C) 2021 Ethan Uppal
+-->
+
+<svg version="1.1"
+     baseProfile="full"
+     width="400" height="580"
+     xmlns="http://www.w3.org/2000/svg">
+
+     <defs>
+         <style type="text/css">
+             .code {
+                fill: white;
+                font-family: Menlo, Courier;
+             }
+             .arrow {
+                stroke: white;
+                stroke-width: 2px;
+             }
+         </style>
+     </defs>
+
+     <rect width="400" height="160" fill="black" />
+     <text x="10" y="55" class="code" style="font-size: 45px;">load_command64</text>
+     <text x="45" y="100" class="code" font-size="25">uint32_t cmd</text>
+     <text x="45" y="130" fill="white" font-family="Menlo,Courier" font-size="25">uint32_t cmdsize</text>
+
+     <rect y="180" width="400" height="400" fill="black" />
+     <text x="25" y="215" class="code" style="font-size: 20px">Optional Data (cmdsize bytes)</text>
+     <line x1="200" y1="235" x2="200" y2="555" class="arrow" />
+     <line x1="200" y1="555" x2="175" y2="530" class="arrow" />
+     <line x1="200" y1="555" x2="225" y2="530" class="arrow" />
+
+</svg>

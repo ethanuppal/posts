@@ -1,0 +1,126 @@
+<!--
+posts/resources: macho2-structure.svg
+Copyright (C) 2021 Ethan Uppal
+-->
+
+<svg version="1.1"
+    baseProfile="full"
+    width="475" height="540"
+    xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+        <style type="text/css">
+            .code {
+                font-family: Menlo,Courier;
+                font-size: 25px;
+            }
+            .keyw {
+                fill: #E040FF;
+                font-weight: bold;
+            }
+            .type {
+                fill: #C0A0FF;
+            }
+            .iden {
+                fill: white;
+            }
+            .bar {
+                stroke: white;
+                stroke-width: 2px;
+            }
+            .side {
+                stroke: black;
+                stroke-width: 12px;
+            }
+            .arrow {
+                stroke: #10F010;
+                stroke-width: 2px;
+            }
+        </style>
+    </defs>
+
+    <!-- Black background -->
+    <rect width="100%" height="100%" fill="black" />
+
+    <!-- mach_header_64 -->
+    <text x="20" y="40" class="code">
+        <tspan class="keyw">struct</tspan>
+        <tspan class="type">mach_header_64</tspan>
+    </text>
+    <line x1="0" y1="60" x2="100%" y2="60" class="bar" />
+
+    <!-- segment_command_64 -->
+    <text x="20" y="100" class="code">
+        <tspan class="keyw">struct</tspan>
+        <tspan class="type">segment_command_64</tspan>
+    </text>
+    <line x1="0" y1="120" x2="100%" y2="120" class="bar" />
+
+    <!-- section_64 -->
+    <text x="20" y="160" class="code">
+        <tspan class="keyw">struct</tspan>
+        <tspan class="type">section_64</tspan>
+    </text>
+
+    <!-- Arrow from section_64 to code[] -->
+    <line x1="0" y1="180" x2="100%" y2="180" class="bar" />
+    <path d="M 15 155 Q 0 200, 15 375" class="arrow" fill="transparent" />
+    <line x1="15" y1="375" x2="21" y2="364" class="arrow" />
+    <line x1="15" y1="375" x2="8" y2="365" class="arrow" />
+
+    <!-- build_version_command -->
+    <text x="20" y="220" class="code">
+        <tspan class="keyw">struct</tspan>
+        <tspan class="type">build_version_command</tspan>
+    </text>
+    <line x1="0" y1="240" x2="100%" y2="240" stroke="white" stroke-width="2" />
+
+    <!-- symtab_command -->
+    <text x="20" y="280" class="code">
+        <tspan class="keyw">struct</tspan>
+        <tspan class="type">symtab_command</tspan>
+    </text>
+    <line x1="0" y1="300" x2="100%" y2="300" class="bar" />
+
+    <!-- Arrow from symtab_command to symbol_table[] -->
+    <path d="M 340 270 Q 400 350, 370 440" class="arrow" fill="transparent"/>
+    <line x1="370" y1="440" x2="366" y2="427" class="arrow" />
+    <line x1="370" y1="440" x2="380" y2="430" class="arrow" />
+
+    <!-- Arrow from symtab_command to string_table[] -->
+    <path d="M 340 270 Q 520 350, 320 510" class="arrow" fill="transparent"/>
+    <line x1="320" y1="510" x2="325" y2="495" class="arrow" />
+    <line x1="320" y1="510" x2="334" y2="510" class="arrow" />
+
+    <!-- dysymtab_command -->
+    <text x="20" y="340" class="code">
+        <tspan class="keyw">struct</tspan>
+        <tspan class="type">dysymtab_command</tspan>
+    </text>
+    <line x1="0" y1="360" x2="100%" y2="360" class="bar" />
+
+    <!-- code -->
+    <text x="20" y="400" class="code">
+        <tspan class="type">uint8_t</tspan>
+        <tspan class="iden">code[]</tspan>
+    </text>
+    <line x1="0" y1="420" x2="100%" y2="420" class="bar" />
+
+    <!-- symbol_table -->
+    <text x="20" y="460" font-family="Menlo,Courier" font-size="25">
+        <tspan class="type">nlist_64</tspan>
+        <tspan class="iden">symbol_table[]</tspan>
+    </text>
+    <line x1="0" y1="480" x2="100%" y2="480" class="bar" />
+
+    <!-- string_table -->
+    <text x="20" y="520" class="code">
+        <tspan class="type">char</tspan>
+        <tspan class="iden">string_table[]</tspan>
+    </text>
+
+    <!-- side lines -->
+    <line x1="0" y1="0" x2="0" y2="100%" class="side"/>
+    <line x1="100%" y1="0" x2="100%" y2="100%" class="side" />
+
+</svg>

@@ -1,0 +1,78 @@
+This file contains the result of running machdump on the Mach-O file created in the second Mach-O post.
+
+machdump: https://github.com/ethanuppal/machdump
+
+│ Header: struct mach_header_64
+└─┐ Magic: 0xfeedfacf
+  │ CPU Type: 0x01000007: CPU_TYPE_X86_64
+  │ CPU Subtype: 0x00000003:CPU_SUBTYPE_X86_64_ALL
+  │ File Type: 0x00000001: MH_OBJECT: Intermediate Object File
+  │ Number of load commands: 4
+  │ Size of load commands: 280 byte(s)
+┌─┘ Flags: 0x00000000: None
+│ Load Command (at offset 0x0000000000000020)
+└─┐ Command Type: 0x00000019: LC_SEGMENT_64: struct segment_command_64
+  │ Command Size: 152 byte(s)
+  │ Segment Name: ""
+  │ Virtual Memory Address: 0x0000000000000000
+  │ Virtual Memory Size: 0x0000000000000013
+  │ File Offset: 0x0000000000000138
+  │ File Size: 0x0000000000000013
+  │ Maximum Virtual Memory Protection: 0x00000006
+  │ Initial Virtual Memory Protection: 0x00000006
+  │ Number of sections: 1
+  │ Flags: 00000000: None
+  │ Section 64: struct section_64
+  └─┐ Section Name: "__text"
+    │ Segment Name: "__TEXT"
+    │ Virtual Memory Address: 0x0000000000000000
+    │ Virtual Memory Size: 0x0000000000000013
+    │ File Offset: 0x00000138
+    │ Section Alignment: 2**0
+    │ File offset of first relocation entry: 0x00000000
+    │ Number of first relocation entries: 0
+    │ Flags: 0x80000400: S_ATTR_PURE_INSTRUCTIONS S_ATTR_SOME_INSTRUCTIONS
+  ┌─┘ Assembly: 0xeb 0x05 0x90 0x90 0x90 ... 0x00 0x0f 0x05
+┌─┘
+│ Load Command (at offset 0x00000000000000b8)
+└─┐ Command Type: 0x00000032: LC_BUILD_VERSION: struct build_version_command
+  │ Command Size: 24 byte(s)
+  │ Minimum OS: 0x000a0f00: 10.15.0
+  │ Minimum SDK: 0x00000000: 0.0.0
+┌─┘ Number of build tools: 0
+│ Load Command (at offset 0x00000000000000d0)
+└─┐ Command Type: 0x00000002: LC_SYMTAB: struct symtab_command
+  │ Command Size: 24 byte(s)
+  │ Symbol Table Offset: 331 byte(s)
+  │ Number of Symbols: 1
+  │ String Table Offset: 347 byte(s)
+  │ String Table Size: 8 byte(s)
+  │ Symbol: struct nlist_64
+  └─┐ Offset in String Table: 1
+    │ Type: 0x0f: N_EXT(External Symbol) N_SECT(Defined in Section)
+    │ Section Location: 1 (from 1)
+    │ Description: 0x0000
+    │ Address of Symbol in Assembly: 0x00000000
+  ┌─┘ String: offset 0x000000000000015c: "_main"
+┌─┘
+│ Load Command (at offset 0x00000000000000e8)
+└─┐ Command Type: 0x0000000b: LC_DYSYMTAB: struct dysymtab_command
+  │ Command Size: 80 byte(s)
+  │ Index of first local symbol: 0
+  │ Number of local symbols: 0
+  │ Index of first external symbol: 1
+  │ Number of external symbols: 1
+  │ Index of first undefined external symbol: 0
+  │ Number of undefined external symbols: 0
+  │ File offset of table of contents: 0
+  │ Number of entries in table of contents: 0
+  │ File offset of module table: 0
+  │ Number of entries in module table: 0
+  │ File offset of external reference table: 0
+  │ Number of entries in external reference table: 0
+  │ File offset of indirect symbol table: 0
+  │ Number of entries in indirect symbol table: 0
+  │ File offset of external relocation table: 0
+  │ Number of entries in external relocation table: 0
+  │ File offset of local relocation table: 0
+┌─┘ Number of entries in local relocation table: 0
