@@ -66,7 +66,7 @@ _Example output of my Mach-O debug tool_
 
 I entered the battlefield with `printf` at the ready. First to be conquered was the header, then the load commands. After these exploits, I went deeper into the load commands to extract specific information about them. For instance, `struct section_64` contains a member related to the machine code. I tried printing the bytes at the offset that the member specified, and they matched the assembly code I had inputted. I did the same print-and-test game with `struct nlist_64` to discover where symbols were stored. As I put more and more of these pieces together, I slowly began to understand the internals of Mach-O files. I created various assembly scripts isolating a single aspect of compilation (the code itself, symbols, multiple symbols, etc.) and ran my program on them to learn what the Mach-O fields became.
 
-Finally, I was able to piece together all the components and wrote [a 167-line C script that generates a Mach-O file for `exit(42)`](posts/resources/macho1-exit42.c). After more head-scratching and a reread of the docs, I produced [another C script that generates a Mach-O file containing `add` and `sub` functions](posts/resources/macho-addsub.c). This file, in particular, can link with a C file such as the following:
+Finally, I was able to piece together all the components and wrote [a 167-line C script that generates a Mach-O file for `exit(42)`](/posts/resources/macho1-exit42.c). After more head-scratching and a reread of the docs, I produced [another C script that generates a Mach-O file containing `add` and `sub` functions](/posts/resources/macho-addsub.c). This file, in particular, can link with a C file such as the following:
 
 ```c
 int add(int x, int y);
