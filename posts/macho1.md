@@ -79,4 +79,4 @@ int main() {
 
 Although I still have much more to learn about Mach-O files, my journey to understand them ends here. With the foundational knowledge I have acquired, I can more easily look deeper into the complexities that I ignored during this process. In [a part two](/posts/macho2.md), I will provide a more in-depth analysis of Mach-O files and walk through that first `exit(42)` program.
 
-_Copyright (C) 2021 Ethan Uppal. This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/.)._
+_Copyright (C) 2021 Ethan Uppal. All rights reserved._
